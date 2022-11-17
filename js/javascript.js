@@ -67,17 +67,6 @@ function CriarCartas(classCarta) {
         carta.appendChild(tagDivImg);
         return carta;
 }
-// Redimencionador();
-// function Redimencionador() {
-//         let j = 0;
-//         const delay = setInterval(function () {
-//                 alert(i);
-//                 i++;
-//                 if (i == 3) {
-//                         clearInterval(delay);
-//                 }
-//         }, 5000);
-// }
 
 let btnEscolha = document.querySelector("#escolha");
 let excluirCarta = document.querySelectorAll("#carta");
@@ -205,7 +194,6 @@ function MostrarCartaPensada() {
                         let divPopUp = document.querySelector(".popUp");
                         let divPopUp_p = document.querySelector(".popUp p");
                         divPopUp.style.display = "flex";
-                        alert(i);
                         if(i == 0){
                                 divPopUp_p.innerHTML = "Possivelmente você informou algo errado! <br><br> Vamos outra vez!"; 
                         }else{
