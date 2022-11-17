@@ -23,7 +23,7 @@ function MostrarCartas(criaBtn) {
                                         imgsMostradas.includes(numCarta)
                                         || numCarta == 0
                                 );
-                                let img = `<img src='../imgs_icons/img${numCarta}.png' alt='emogin'>`;
+                                let img = `<img src='./imgs_icons/img${numCarta}.png' alt='emogin'>`;
                                 numsCartas[j].push(img);
                                 imgsMostradas.push(numCarta);
                                 carta = CriarCartas("micro_carta");
