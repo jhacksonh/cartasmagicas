@@ -1,0 +1,75 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style.css">
+    <title>Magica com cartas</title>
+    <style>
+        .popUp{
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            background-color: #ccc9;
+            width: 100vw;
+            height: 100vh;
+        }
+        .popUp div{
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            width: 50%;
+            height: min-content;
+            background-image: linear-gradient(#cff, #8ff, #6ff, #3ff, #6ff, #8ff, #cff);
+        }
+        .popUp div button{
+            width: 100px;
+            margin: 10px;
+        }
+        .popUp p{
+            font-size: 30px;
+            text-align:center;
+        }
+
+        .correct{
+            display: none;
+            width: 300px;
+
+        }
+        .correct button{
+            margin: 0px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popUp">
+        <div>
+            <p></p>
+            <button class="reload">OK</button>
+        </div>
+    </div>
+    <header class="cabecalho">
+        <div>
+            <h1>Posso facilmente acertar sua carta!</h1>
+        </div>
+        <button style="display: none;" class="reload"></button>
+    </header>
+    <main class="mesa">
+        <h1 class="interar">Escolha uma carta</h1>
+        <div class="area">
+        </div>
+        <div class="correct">
+        <button>errou</button>
+        <button>Acertou</button>
+        </div>
+    </main>
+    <footer class="rodape">
+
+    </footer>
+    <script src="js/javascript.js"></script>
+</body>
+
+</html>
