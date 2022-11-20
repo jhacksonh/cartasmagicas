@@ -2,6 +2,8 @@ let mesa = document.querySelector(".mesa");
 let interator = document.querySelector(".interar");
 let area = document.querySelector(".area");
 let seqEscolhida;
+
+
 let cartas = [], imgsMostradas = [], numsCartas = [[], [], [], [], [], [], []], auxCartas = [], tagsDivImgs = [[], [], []], seq = [];
 let numCarta;
 let carta;
@@ -10,6 +12,9 @@ let count = 0;
 
 
 MostrarCartas(0);
+ExibirValores();
+
+//define quantidade de cartas, e joga na div cartas que po sua vez e colocada na secion mesa;
 function MostrarCartas(criaBtn) {
         for (let i = 0; i < 3; i++) {
                 cartas[i] = document.createElement("div");
@@ -56,7 +61,7 @@ function MostrarCartas(criaBtn) {
         }
 }
 
-
+//Criar as cartas
 function CriarCartas(classCarta) {
         carta = document.createElement("div");
         carta.classList.add(classCarta);
@@ -67,6 +72,8 @@ function CriarCartas(classCarta) {
         return carta;
 }
 
+
+// botao nomeado como "já escolhi";
 let btnEscolha = document.querySelector("#escolha");
 let excluirCarta = document.querySelectorAll("#carta");
 let divCartas = document.querySelectorAll(".cartas");
@@ -86,13 +93,13 @@ btnEscolha.addEventListener("click", () => {
                 divCartas[key].parentNode.removeChild(divCartas[key]);
         }
         MostrarCartas(1);
-        ExibirNumeros();
+        ExibirValores();
         Execultor();
         btnEscolha.parentNode.removeChild(btnEscolha);
 });
 
-ExibirNumeros();
-function ExibirNumeros() {
+//Exibe os emogins
+function ExibirValores() {
         let i = 0;
         const delay0 = setInterval(function () {
                 for (let j = 0; j < 3; j++) {
@@ -105,6 +112,9 @@ function ExibirNumeros() {
         }, 100);
 }
 
+
+
+//lógica do jogo!!!
 function Execultor() {
         seqEscolhida = document.querySelectorAll("#btnSeq");
         for (let key = 0; key < 3; key++) {
@@ -168,7 +178,7 @@ function Execultor() {
         }
 }
 
-
+//mágico
 function MostrarCartaPensada() {
         let divBotao = document.querySelectorAll(".div_btn");
         divCartas = document.querySelectorAll(".cartas");
@@ -211,6 +221,4 @@ function RecarregarPagina() {
                         location.reload();
                 });
         }
-
-
 }

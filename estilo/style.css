@@ -13,6 +13,7 @@ body {
     height: 100vh;
     background-image: linear-gradient(#a4560f, #813a00, #964b00, #884000, #8f4500, #ab5c16, #9d5107);
 }
+/* estilizaçâo do cabeçalho */
 
 .cabecalho {
     display: flex;
@@ -46,6 +47,7 @@ body {
     background: url("../imgs_icons/reload.jpg");
     background-size: cover;
 }
+/* estilizaçâo da área de interação */
 .sala{
     width: 100vw;
     height: 75vh;
@@ -204,9 +206,50 @@ button:hover {
     background-image: linear-gradient(to Left, #2518, #5218);
 }
 
+/* estilizaçâo rodapé */
 .rodape {
     background-image: linear-gradient(to bottom right, #520800, #813a00, #520800, #884000, #364,#070, #520800, #742a00,#364,#070, #520800, #813a00, #520800, #364, #520800, #520800, #742a00, #384);
     min-height: 100px;
     height: 15vh;
     background-color: #fac;
+}
+
+/* estilizaçâo popUp */
+.popUp {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #ccc9;
+    width: 100vw;
+    height: 100vh;
+}
+
+.popUp div {
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 60%;
+    height: min-content;
+    background-image: linear-gradient(#cff, #8ff, #6ff, #3ff, #6ff, #8ff, #cff);
+}
+
+.popUp div button {
+    width: 100px;
+    margin: 10px;
+}
+
+.popUp p {
+    font-size: 30px;
+    text-align: center;
+}
+
+.correct {
+    display: none;
+    width: 300px;
+
+}
+
+.correct button {
+    margin: 0px 10px;
 }
