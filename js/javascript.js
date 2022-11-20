@@ -12,8 +12,6 @@ let count = 0;
 
 
 MostrarCartas(0);
-ExibirValores();
-
 //define quantidade de cartas, e joga na div cartas que po sua vez e colocada na secion mesa;
 function MostrarCartas(criaBtn) {
         for (let i = 0; i < 3; i++) {
@@ -99,6 +97,8 @@ btnEscolha.addEventListener("click", () => {
 });
 
 //Exibe os emogins
+
+ExibirValores();
 function ExibirValores() {
         let i = 0;
         const delay0 = setInterval(function () {
@@ -169,7 +169,7 @@ function Execultor() {
                                 col++;
                         }
                         auxCartas = [];
-                        ExibirNumeros();
+                        ExibirValores();
 
                         if (count == 3) {
                                 MostrarCartaPensada();
