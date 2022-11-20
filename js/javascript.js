@@ -11,7 +11,6 @@ let count = 0;
 
 MostrarCartas(0);
 function MostrarCartas(criaBtn) {
-
         for (let i = 0; i < 3; i++) {
                 cartas[i] = document.createElement("div");
                 cartas[i].classList.add("cartas");
@@ -78,7 +77,7 @@ btnEscolha.addEventListener("click", () => {
         numsCartas = [[], [], [], [], [], [], []];
         imgsMostradas = [];
         tagsDivImgs = [[], [], []];
-
+        interator.innerHTML = `em que fila está sua carta?  <spam> 1 de 3</span>`;
 
         for (let i = 0; i < excluirCarta.length; i++) {
                 excluirCarta[i].parentNode.removeChild(excluirCarta[i]);
@@ -86,7 +85,6 @@ btnEscolha.addEventListener("click", () => {
         for (let key = 0; key < divCartas.length; key++) {
                 divCartas[key].parentNode.removeChild(divCartas[key]);
         }
-        interator.innerHTML = "em que fila está sua carta?";
         MostrarCartas(1);
         ExibirNumeros();
         Execultor();
@@ -112,6 +110,7 @@ function Execultor() {
         for (let key = 0; key < 3; key++) {
                 seqEscolhida[key].addEventListener("click", () => {
                         count++;
+                        interator.innerHTML = `em que fila está sua carta?  <spam>${count+1} de 3</span>`;
                         do {
                                 num = Math.floor(Math.random() * 3);
                         } while (num == key);
