@@ -9,8 +9,8 @@
 }
 
 body {
+    position: relative;
     width: 100vw;
-    height: 100vh;
     background-image: linear-gradient(#a4560f, #813a00, #964b00, #884000, #8f4500, #ab5c16, #9d5107);
 }
 /* estilizaçâo do cabeçalho */
@@ -37,6 +37,7 @@ body {
 .cabecalho button{
     width: 50px;
     height: 50px;
+    z-index: 2;
     border-radius: 50%;
     background: url("../imgs_icons/reload.jpg");
     background-size: cover;
@@ -51,7 +52,7 @@ body {
 .sala{
     width: 100vw;
     height: 75vh;
-    min-height: 650px;
+    min-height: 680px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -216,13 +217,13 @@ button:hover {
 
 /* estilizaçâo popUp */
 .popUp {
+    position: absolute;
     display: none;
     justify-content: center;
     align-items: center;
-    position: absolute;
     background-color: #ccc9;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
 }
 
 .popUp div {
